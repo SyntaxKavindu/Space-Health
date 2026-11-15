@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+}
+
+body { margin: 0; background: #eaf6ff; color: #0c2a44; }
+
+@keyframes scan { from { transform: translateY(-50px); } to { transform: translateY(480px); } }
+.scan { animation: scan 4.5s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) { .scan { animation: none; } }
+
+/* ---------- dark theme: the same classes ---------- */
+.dark {
+  color-scheme: dark; /* dark scrollbars, dropdowns and number inputs */
+
+  --color-white: #0f1d30;      /* card surface */
+  --color-sky-50: #152a44;     /* tiles inside cards */
+  --color-sky-100: #1b3553;    /* bar tracks, soft buttons */
+  --color-sky-200: #284a6e;    /* borders */
+  --color-sky-300: #3a6794;    /* stronger borders */
+  --color-sky-700: #7dd3fc;
+  --color-sky-800: #a5e0fc;
+  --color-sky-900: #cdeefd;
+  --color-sky-950: #eaf8ff;    /* main text */
+
+  --color-slate-100: #1b2d44;
+  --color-slate-500: #9fb2c6;
+  --color-slate-600: #b4c3d3;
+  --color-slate-700: #ccd8e4;
+  --color-slate-800: #e2eaf2;
+
+  --color-emerald-50: #0c2d26;
+  --color-emerald-100: #0e3d31;
+  --color-emerald-700: #6ee7b7;
+  --color-emerald-800: #86efac;
+
+  --color-amber-50: #33260c;
+  --color-amber-100: #45310d;
+  --color-amber-200: #6b4d12;
+  --color-amber-300: #8a6414;
+  --color-amber-700: #fcd34d;
+  --color-amber-800: #fde68a;
+
+  --color-red-50: #3a1518;
+  --color-red-100: #4d1a1e;
+  --color-red-200: #7a2a30;
+  --color-red-300: #a13a42;
+  --color-red-600: #f87171;
+  --color-red-700: #fca5a5;
+}
+
+.dark body { background: #08111f; color: #dbeafe; }
+.dark .text-white { color: #fff; } /* keep white text on the blue buttons */
